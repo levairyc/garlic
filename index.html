@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GARLIC Restaurant</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="brand" href="#home">GARLIC</a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#tentang">Tentang Kami</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+
+            <button class="burger" id="burgerButton"
+                aria-label="Buka menu" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="home">
+        <div class="container hero-content">
+            <p class="eyebrow">WELCOME TO GARLIC</p>
+
+            <h1>Nikmati Hidangan Lezat di GARLIC</h1>
+
+            <p class="hero-text">
+                Sajian lezat dengan cita rasa yang nikmat dan
+                suasana yang nyaman untuk dinikmati bersama.
+            </p>
+
+            <a class="primary-btn" href="#menu">
+                Lihat Menu
+            </a>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <section class="section" id="menu">
+        <div class="container">
+
+            <h2>Menu GARLIC</h2>
+
+            <p class="section-text">
+                Nikmati berbagai pilihan makanan dan minuman khas Nusantara
+                dengan cita rasa yang lezat.
+            </p>
+
+            <!-- Pencarian dan filter kategori -->
+            <div class="menu-controls">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari menu..."
+                    aria-label="Cari menu"
+                >
+
+                <select id="categoryFilter" aria-label="Pilih kategori">
+                    <option value="Semua">Semua Kategori</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Camilan">Camilan</option>
+                </select>
+            </div>
+
+            <!-- Ringkasan menu -->
+            <div class="menu-summary">
+                <p>Jumlah Menu: <strong id="productCount">0</strong></p>
+                <p>Total Stok: <strong id="stockCount">0</strong></p>
+            </div>
+
+            <!-- Menu akan ditampilkan oleh JavaScript -->
+            <div class="card-grid" id="productList"></div>
+
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section class="section about" id="tentang">
+        <div class="container">
+            <h2>Tentang GARLIC</h2>
+
+            <p>
+                GARLIC Restaurant menyajikan berbagai pilihan makanan,
+                minuman, dan camilan dengan cita rasa yang lezat.
+                Kami ingin memberikan pengalaman makan yang nyaman
+                bagi setiap pelanggan.
+            </p>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section class="section contact" id="kontak">
+        <div class="container">
+            <h2>Kontak Kami</h2>
+            <p>Silakan kunjungi GARLIC Restaurant untuk menikmati menu kami.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 GARLIC Restaurant. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```

@@ -1,0 +1,321 @@
+```css
+/* PENGATURAN DASAR */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+.container,
+.nav-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    background: #222;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.brand {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.burger {
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    padding: 100px 0;
+    background: #f5f1e8;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 0 0 20px;
+    font-size: 44px;
+}
+
+.hero-text {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.primary-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+}
+
+.primary-btn:hover {
+    background: #444;
+}
+
+/* SECTION */
+.section {
+    padding: 70px 0;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.section-text {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* PENCARIAN DAN FILTER */
+.menu-controls {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.menu-controls input,
+.menu-controls select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.menu-controls input {
+    flex: 1;
+    min-width: 0;
+}
+
+.menu-controls select {
+    width: 200px;
+    background: white;
+}
+
+/* RINGKASAN MENU */
+.menu-summary {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.menu-summary p {
+    margin: 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: #f5f1e8;
+}
+
+/* KARTU MENU */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card {
+    overflow: hidden;
+    padding-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: white;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 18px 20px 8px;
+    font-size: 22px;
+}
+
+.card p {
+    margin: 8px 20px;
+}
+
+.card .price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* STATUS STOK */
+.stock {
+    font-weight: bold;
+}
+
+.available {
+    color: #218838;
+}
+
+.low {
+    color: #d98200;
+}
+
+.empty {
+    color: #dc3545;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: 30px;
+    text-align: center;
+}
+
+/* TENTANG KAMI */
+.about {
+    background: #f5f1e8;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* KONTAK */
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 8px 0;
+}
+
+/* FOOTER */
+.footer {
+    padding: 25px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: 20px;
+        background: #222;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 230px;
+    }
+
+    .menu-controls,
+    .menu-summary {
+        flex-direction: column;
+    }
+
+    .menu-controls input,
+    .menu-controls select {
+        width: 100%;
+    }
+
+    .menu-summary {
+        gap: 10px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+}
+```
